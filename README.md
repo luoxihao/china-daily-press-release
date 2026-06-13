@@ -92,27 +92,30 @@ Codex personal skills usually live in:
 ~/.agents/skills/
 ```
 
-Run the command from the parent directory that contains `china-daily-press-release`.
+Run the command from the parent directory that contains the source repository folder, `china-daily-press-release-skill`.
 
 ### Windows PowerShell
 
 ```powershell
 New-Item -ItemType Directory -Force "$env:USERPROFILE\.agents\skills" | Out-Null
-Copy-Item -Recurse -Force ".\china-daily-press-release" "$env:USERPROFILE\.agents\skills\china-daily-press-release"
+New-Item -ItemType Directory -Force "$env:USERPROFILE\.agents\skills\china-daily-press-release" | Out-Null
+Copy-Item -Recurse -Force ".\china-daily-press-release-skill\*" "$env:USERPROFILE\.agents\skills\china-daily-press-release"
 ```
 
 ### macOS
 
 ```bash
 mkdir -p ~/.agents/skills
-cp -R ./china-daily-press-release ~/.agents/skills/china-daily-press-release
+mkdir -p ~/.agents/skills/china-daily-press-release
+cp -R ./china-daily-press-release-skill/. ~/.agents/skills/china-daily-press-release/
 ```
 
 ### Linux
 
 ```bash
 mkdir -p ~/.agents/skills
-cp -R ./china-daily-press-release ~/.agents/skills/china-daily-press-release
+mkdir -p ~/.agents/skills/china-daily-press-release
+cp -R ./china-daily-press-release-skill/. ~/.agents/skills/china-daily-press-release/
 ```
 
 Start a new Codex session after installation, then call:
@@ -135,27 +138,30 @@ Claude Code personal skills usually live in:
 ~/.claude/skills/
 ```
 
-Run the command from the parent directory that contains `china-daily-press-release`.
+Run the command from the parent directory that contains the source repository folder, `china-daily-press-release-skill`.
 
 ### Windows PowerShell
 
 ```powershell
 New-Item -ItemType Directory -Force "$env:USERPROFILE\.claude\skills" | Out-Null
-Copy-Item -Recurse -Force ".\china-daily-press-release" "$env:USERPROFILE\.claude\skills\china-daily-press-release"
+New-Item -ItemType Directory -Force "$env:USERPROFILE\.claude\skills\china-daily-press-release" | Out-Null
+Copy-Item -Recurse -Force ".\china-daily-press-release-skill\*" "$env:USERPROFILE\.claude\skills\china-daily-press-release"
 ```
 
 ### macOS
 
 ```bash
 mkdir -p ~/.claude/skills
-cp -R ./china-daily-press-release ~/.claude/skills/china-daily-press-release
+mkdir -p ~/.claude/skills/china-daily-press-release
+cp -R ./china-daily-press-release-skill/. ~/.claude/skills/china-daily-press-release/
 ```
 
 ### Linux
 
 ```bash
 mkdir -p ~/.claude/skills
-cp -R ./china-daily-press-release ~/.claude/skills/china-daily-press-release
+mkdir -p ~/.claude/skills/china-daily-press-release
+cp -R ./china-daily-press-release-skill/. ~/.claude/skills/china-daily-press-release/
 ```
 
 Start a new Claude Code session after installation, then call:
@@ -174,7 +180,7 @@ If Claude Code does not find the skill, check that:
 ## Directory layout
 
 ```text
-china-daily-press-release/
+china-daily-press-release-skill/
   SKILL.md
   README.md
   README.zh-CN.md
