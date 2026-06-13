@@ -1,0 +1,4 @@
+interface:
+  display_name: "China Daily Press Release"
+  short_description: "China Daily-style external communication"
+  default_prompt: "Use $china-daily-press-release to turn verified Chinese event materials into an English external communication draft with a fact-check list."
